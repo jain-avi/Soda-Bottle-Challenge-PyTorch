@@ -10,7 +10,7 @@ import torch.optim as optim
 from torchvision import transforms
 import torchvision.models as models 
 from cnn_architecture import CNN
-from dataloader_v2 import bottle,data_split
+from dataloader import bottle,data_split
 
 #--------------------------------------------------------------------------
 #Defining Dataloader and Transforms 
