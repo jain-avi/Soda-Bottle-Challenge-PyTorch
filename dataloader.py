@@ -32,7 +32,6 @@ def data_split(dir):
 class bottle(torch.utils.data.Dataset):
     def __init__(self, filename, transforms = None):
         self.root_dir = 'Soda_Bottles/'
-        #self.frames = pd.read_csv('Soda_Bottles/train.csv')
         self.frames = pd.read_csv(filename)
         self.transforms = transforms
 
@@ -51,16 +50,3 @@ class bottle(torch.utils.data.Dataset):
 
     def __len__(self):
         return len(self.frames)
-"""
-#normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],std=[0.229, 0.224, 0.225])
-#data_transform = transforms.Compose([transforms.Resize(256),transforms.RandomResizedCrop(224),
- #                                   transforms.RandomHorizontalFlip(),
- #                                   transforms.ToTensor(),normalize])
-
-#soda_bottles = bottle(data_transform)
-
-#train_loader = torch.utils.data.DataLoader(dataset=soda_bottles,
-                                         #  batch_size=32, 
-                                         #  shuffle=True)
-#model = CNN()
-"""
